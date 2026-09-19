@@ -200,3 +200,18 @@
   .formula-box i { transform: rotate(90deg); justify-self: start; }
   .change-rule { grid-template-columns: 1fr; }
 }
+
+/* ===== Print / PDF adaptation (implementation page) ===== */
+@media print{
+  .noise,.site-header,.menu-toggle,.header-cta,.hero-actions,.final-cta .hero-actions{display:none!important}
+  body{background:#fff!important}
+  *,*::before,*::after{background:transparent!important;box-shadow:none!important;text-shadow:none!important;color:#14212b!important}
+  a{color:#14212b!important;text-decoration:underline}
+  .wrap{width:100%!important;max-width:100%!important}
+  section{padding-block:22px!important}
+  .answer-card,.scope-row,.timeline article,.sprint-grid article,.outcome-grid article,.domain-list article,.party-grid article,.team-strip div,.accept-row,.fee-row,.budget-card,.payment-strip span,.cadence div,.deliverable-grid article,.service-level article,.change-rule,.legal-note,.decision-card,.return-results div,.formula-box,.budget-bar i{border:1px solid #b9c6cf!important;break-inside:avoid}
+  .budget-bar i{border-color:#7d94a5!important}
+  input[type=range]{display:none!important}
+  .return-layout{grid-template-columns:1fr 1fr}
+  .site-footer{border-top:1px solid #b9c6cf}
+}

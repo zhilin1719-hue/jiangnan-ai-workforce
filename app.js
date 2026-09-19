@@ -28,3 +28,7 @@ $('download-baseline').addEventListener('click',()=>csvDownload([['法定用人�
 let toastTimer;function toast(message){$('toast').textContent=message;$('toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),3000);}
 const menu=document.querySelector('.menu-toggle');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));$('nav-links').classList.toggle('open',open);});document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');$('nav-links').classList.remove('open');}));
 calculate();activateWorkflow($('wf-admissions'));
+
+// Print helpers: expand all collapsed <details> (timeline, sensitivity) when printing, restore after.
+window.addEventListener('beforeprint',()=>{document.querySelectorAll('details').forEach(d=>{d.dataset.printOpen=d.open?'1':'0';d.open=true;});});
+window.addEventListener('afterprint',()=>{document.querySelectorAll('details').forEach(d=>{if(d.dataset.printOpen==='0')d.open=false;delete d.dataset.printOpen;});});
