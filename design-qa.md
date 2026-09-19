@@ -39,3 +39,13 @@
 ## 最终判定
 
 通过。新页面与现有首页在颜色、密度、组件形态和董事会阅读节奏上保持一致，同时新增周期、费用、付款和回报决策信息。
+
+## 2026-09 优化发布记录
+
+| 项目 | 结果 | 说明 |
+|---|---|---|
+| 首屏图片 | 通过 | education-future.png 转 JPEG（q82），1.95 MB → 183 KB，压缩约 91%，肉眼验收无可见损失。 |
+| SEO / 分享 | 通过 | 两页补充 canonical、favicon（内联 SVG JN 标）、Open Graph 与 Twitter Card，og:image 指向压缩后首图。 |
+| 桌面复核 | 通过 | 计算器四口径切换、恢复默认、工作流切换、报价锚点、回报滑杆全部正常；控制台无错误。 |
+| 移动端复核 | 通过 | 390×844 视口两页均无横向溢出（scrollWidth=clientWidth=588）；折叠导航正常展开；工作包表格转为卡片可读。 |
+| 仓库清理 | 通过 | 新增 .gitignore（tmp/、*.log、Thumbs.db）；移除未引用的 assets/education-future.png 与根目录旧 PNG。 |
