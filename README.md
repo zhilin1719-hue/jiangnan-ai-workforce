@@ -15,6 +15,6 @@ GitHub Pages 从 `main` 分支根目录发布。无需构建、数据库或第�
 - `index.html`：方案与来源
 - `styles.css`：响应式深色设计
 - `app.js`：本地测算、流程切换、CSV 导出
-- `downloads/`：可编辑汇报、执行方案和测算表
+- `board-deck.pptx` / `execution-plan.docx` / `workforce-model.xlsx`：可编辑汇报、执行方案和测算表
 
 不采集访问者表单内容；情景参数仅在浏览器当前页面计算。研究检索时间为 2026 年 9 月。图片为生成的概念视觉，非集团真实校区。此页面并非集团官方公告。
